@@ -21,11 +21,11 @@ module.exports = function (grunt) {
     watch: {
       latex: {
         files: '**/*.tex',
-        tasks: ['latex', 'latex:pdf']
+        tasks: ['build']
       },
       bibtex: {
         files: '**/*.bib',
-        tasks: ['latex:bib', 'latex:pdf']
+        tasks: ['latex:bib', 'latex:pdf', 'latex:pdf']
       }
     }
   });
@@ -35,5 +35,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-latex');
 
   // Default task
-  grunt.registerTask('default', ['latex']);
+  grunt.registerTask('default', ['build']);
+  grunt.registerTask('build', ['latex:pdf', 'latex:bib', 'latex:pdf', 'latex:pdf']);
 };

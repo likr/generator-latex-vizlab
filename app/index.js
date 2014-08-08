@@ -14,8 +14,10 @@ var LatexVizlabGenerator = yeoman.generators.Base.extend({
   },
 
   app: function () {
+    this.copy('_gitignore', '.gitignore');
     this.copy('package.json', 'package.json');
     this.copy('document.tex', 'document.tex');
+    this.copy('bxcjkjatype.sty', 'bxcjkjatype.sty');
     this.template('Gruntfile.js', 'Gruntfile.js');
   }
 });
