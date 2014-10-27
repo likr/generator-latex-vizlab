@@ -6,12 +6,12 @@ module.exports = function (grunt) {
       pdf: {
         src: 'document.tex',
         options: {
-          outputDirectory: 'dist/',
+          outputDirectory: '.',
           jobname: '<%= appname %>'
         }
       },
       bib: {
-        src: 'dist/<%= appname %>.aux',
+        src: '<%= appname %>.aux',
         options: {
           engine: 'bibtex',
           interaction: false
