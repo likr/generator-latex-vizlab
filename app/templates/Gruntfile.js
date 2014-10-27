@@ -7,11 +7,11 @@ module.exports = function (grunt) {
         src: 'document.tex',
         options: {
           outputDirectory: '.',
-          jobname: '<%= appname %>'
+          jobname: '<%= name %>'
         }
       },
       bib: {
-        src: '<%= appname %>.aux',
+        src: '<%= name %>.aux',
         options: {
           engine: 'bibtex',
           interaction: false

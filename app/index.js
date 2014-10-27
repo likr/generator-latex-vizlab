@@ -9,6 +9,12 @@ var LatexVizlabGenerator = yeoman.generators.Base.extend({
     var done = this.async();
     var prompts = [
       {
+        type: 'input',
+        name: 'name',
+        message: 'Name',
+        default: this.appname.split(' ').join('-')
+      },
+      {
         type: 'list',
         name: 'style',
         message: 'Template',
@@ -27,6 +33,7 @@ var LatexVizlabGenerator = yeoman.generators.Base.extend({
       }
     ];
     this.prompt(prompts, function (props) {
+      this.name = props.name;
       this.style = props.style;
       this.useJapanese = props.useJapanese;
       done();
