@@ -103,7 +103,7 @@ STRINGS { s t}
 FUNCTION {output.nonnull}
 { 's :=
   output.state mid.sentence =
-    { ", " * write$ }
+    { "; " * write$ }
     { output.state after.block =
         { add.period$ write$
           newline$
@@ -234,7 +234,7 @@ FUNCTION {bbl.and}
 { "and"}
 
 FUNCTION {bbl.etal}
-{ "et~al" }
+{ "et~al." }
 
 FUNCTION {bbl.editors}
 { "eds" }
@@ -652,7 +652,7 @@ FUNCTION {output.bibitem}
 { newline$
   "\bibitem[{" write$
   label write$
-  ")" make.full.names duplicate$ short.list =
+  "" make.full.names =
      { pop$ }
      { * }
    if$
@@ -1449,7 +1449,7 @@ FUNCTION {calc.short.authors}
 FUNCTION {calc.label}
 { calc.short.authors
   short.list
-  "("
+  " "
   *
   year duplicate$ empty$
      { pop$ "????" }

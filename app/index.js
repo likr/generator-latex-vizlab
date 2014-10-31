@@ -51,8 +51,7 @@ var LatexVizlabGenerator = yeoman.generators.Base.extend({
         this.copy('jov/svjour3.cls', 'svjour3.cls');
         this.copy('jov/svglov3.clo', 'svglov3.clo');
         this.copy('jov/spbasic.bst', 'spbasic.bst');
-        this.copy('jov/spmpsci.bst', 'spmpsci.bst');
-        this.copy('jov/spphys.bst', 'spphys.bst');
+        this.copy('jov/cite.sty', 'cite.sty');
       } else {
         this.template('tvcg/document.tex', 'document.tex');
       }

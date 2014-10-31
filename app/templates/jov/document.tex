@@ -20,11 +20,13 @@
 %
 \smartqed  % flush right qed marks, e.g. at end of proof
 %
-\usepackage{graphicx}<% if (useJapanese) { %>
+\usepackage[pdftex]{graphicx}
+\usepackage{mathptmx}
+\usepackage{cite}
+\usepackage[margin=2.5truecm]{geometry}<% if (useJapanese) { %>
 \usepackage[whole]{bxcjkjatype}<% } %>
 
 %
-% \usepackage{mathptmx}      % use Times fonts if available on your TeX system
 %
 % insert here the call for the packages your document requires
 %\usepackage{latexsym}
@@ -78,5 +80,7 @@ subject classification numbers as needed.
 \section{Introduction}
 \label{intro}
 This is an introduction.
+
+\bibliographystyle{spbasic}
 
 \end{document}
