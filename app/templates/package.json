@@ -1,6 +1,9 @@
 {
   "name": "package",
   "version": "0.0.0",
+  "scripts": {
+    "start": "grunt watch"
+  },
   "dependencies": {},
   "devDependencies": {
     "grunt": "^0.4.5",
